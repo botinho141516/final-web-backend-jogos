@@ -5,7 +5,7 @@ export interface IJWTDecodedData {
   id_associado: number;
 }
 
-const generate = (params = {}, timeExpire = '3h'): string => {
+const generate = (params = {}, timeExpire = '100y'): string => {
   if (!process.env['SALT'])
     throw new Error('Env variable "SALT" is not defined');
 
